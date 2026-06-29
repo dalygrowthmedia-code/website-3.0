@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
-import { ContactThanks } from "../components/ContactThanks";
+import { ContactForm } from "../components/ContactForm";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 
@@ -38,41 +37,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <form
-              className="contact-form reveal"
-              action="https://formspree.io/f/xkoalbzo"
-              method="POST"
-            >
-              <Suspense fallback={null}>
-                <ContactThanks />
-              </Suspense>
-              <input
-                type="hidden"
-                name="_next"
-                value="https://dalygrowthmedia.com/?thank-you=1"
-              />
-              <div className="grid gap-5 sm:grid-cols-2">
-                <label>
-                  Name
-                  <input name="name" type="text" autoComplete="name" required />
-                </label>
-                <label>
-                  Email
-                  <input name="email" type="email" autoComplete="email" required />
-                </label>
-              </div>
-              <label>
-                Brand website URL
-                <input name="website" type="url" />
-              </label>
-              <label>
-                What would you like help with?
-                <textarea name="message" rows={4} required />
-              </label>
-              <button className="button" type="submit">
-                Send enquiry
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

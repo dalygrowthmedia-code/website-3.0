@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Suspense } from "react";
-import { ContactThanks } from "./ContactThanks";
+import { ContactForm } from "./ContactForm";
 
 const achievements = [
   {
@@ -366,37 +365,7 @@ export function Contact() {
             </div>
           </div>
 
-          <form
-            className="contact-form reveal"
-            action="https://formspree.io/f/xkoalbzo"
-            method="POST"
-          >
-            <Suspense fallback={null}>
-              <ContactThanks />
-            </Suspense>
-            <input
-              type="hidden"
-              name="_next"
-              value="https://dalygrowthmedia.com/?thank-you=1"
-            />
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label>
-                Name
-                <input name="name" type="text" autoComplete="name" required />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" autoComplete="email" required />
-              </label>
-            </div>
-            <label>
-              Brand website URL
-              <input name="website" type="url" />
-            </label>
-            <button className="button" type="submit">
-              Send enquiry
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </section>
