@@ -37,17 +37,16 @@ The site currently uses:
 
 The original full-size images can stay in `public/assets`, but the site points at the optimised WebP versions for speed.
 
-## Content to replace
+## Content to review
 
-Search the project for square-bracket placeholders before launch:
+The main copy has been drafted in `app/page.tsx`. Before launch, review:
 
-- `[MY STORY HERE]`
-- `[ACHIEVEMENT 1]`, `[ACHIEVEMENT 2]`, `[ACHIEVEMENT 3]`
-- `[SERVICE DESCRIPTION: ...]`
-- `[EMAIL HERE]`
-- `[FORM ACTION PLACEHOLDER: ...]`
+- The About / My Story copy
+- The achievement card wording
+- The service descriptions
+- The contact email, currently `sean@dalygrowthmedia.com`
 
-The contact form is static at the moment. Replace `action="#"` in `app/page.tsx` with your preferred form handler, such as a Vercel serverless route, Formspree, Tally or another service.
+The contact form currently opens the visitor's email app with a mailto action. For a fully hosted form, replace it with your preferred form handler, such as a Vercel serverless route, Formspree, Tally or another service.
 
 ## Deploy to Vercel
 
